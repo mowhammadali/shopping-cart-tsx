@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .badge {
+        @apply rounded-full bg-info dark:bg-darkInfo inline-flex 
+        justify-center items-center w-[24px] h-[24px] text-slate-900 
+        font-bold text-[14px] shadow-md;
+    }
+
+    .square-badge {
+        @apply px-2 py-1 sm:px-4 sm:py-2 rounded-xl inline-flex
+        items-center justify-center text-sm sm:text-base font-bold
+        bg-secondary dark:bg-darkSecondary text-slate-950 dark:text-slate-200;
+    }
+
+    .card-btn {
+        @apply h-[40px] py-2 px-4 bg-text dark:bg-darkText shadow-inner
+        text-primary dark:text-darkPrimary rounded-xl font-bold;
+    }
+
+    .dashboard-card {
+        @apply flex flex-col gap-y-10 
+        p-4 rounded-xl shadow-lg bg-primary dark:bg-darkPrimary;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
